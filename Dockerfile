@@ -1,18 +1,23 @@
+ARG BIALET_VERSION=0.3
+
 # Install library dependencies
 FROM alpine:latest as base
 RUN apk add musl-dev sqlite-dev openssl-dev curl-dev
 
 # Install compilation tools
 FROM base as build
+ARG BIALET_VERSION
 RUN apk add gcc make python3
-WORKDIR /root
-RUN wget https://github.com/bialet/bialet/archive/refs/heads/master.zip -O bialet.zip
-RUN unzip bialet.zip
-WORKDIR /root/bialet-main
-RUN pwd && ls -lht
+WORKDIR /bialet-$BIALET_VERSION
+RUN wget https://github.com/bialet/bialet/archive/refs/tags/v$BIALET_VERSION.zip
+RUN unzip v$BIALET_VERSION.zip -d ../
 RUN make clean && make
 
 # Copy bialet binary
 FROM base as run
-COPY --from=build /root/bialet-main/build/bialet /usr/local/bin/bialet
+ARG BIALET_VERSION
+COPY --from=build /bialet-$BIALET_VERSION/build/bialet /usr/local/bin/bialet
+
+EXPOSE 7000
+
 ENTRYPOINT ["bialet", "-h", "0.0.0.0", "/var/www/"]
