@@ -3,7 +3,7 @@
 Use this repository to start your Bialet project, clone it or fork it.
 
 ```bash
-git clone https://github.com/bialet/base.git as my-web-app
+git clone https://github.com/bialet/skeleton.git my-web-app
 cd my-web-app
 docker compose up
 ```
