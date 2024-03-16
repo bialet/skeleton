@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   bialet:
-    build: .
+    build: _app
     ports:
       - ${BIALET_PORT:-7000}:7000
     volumes:
