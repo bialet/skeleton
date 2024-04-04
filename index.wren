@@ -5,7 +5,7 @@ import "_app/domain" for BialetDocumentation
 //
 // Write your web logic here
 //
-// @see https://bialet.org
+// @see https://bialet.dev
 
 var TITLE = "Your new web app is working!"
 

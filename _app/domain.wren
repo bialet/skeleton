@@ -1,10 +1,10 @@
 //
 // Write your domain logic here
 //
-// @see https://bialet.org
+// @see https://bialet.dev
 
 class BialetDocumentation {
   construct new() {}
-  label { "Quickstart guide" }
-  url { "https://bialet.org/quickstart.html" }
+  label { "Getting Started guide" }
+  url { "https://bialet.dev/getting-started.html" }
 }

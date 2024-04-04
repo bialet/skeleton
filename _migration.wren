@@ -6,4 +6,4 @@ import "bialet" for Db
 //   CREATE TABLE ...
 // `)
 //
-// @see https://bialet.org/migrations.html
+// @see https://bialet.dev/migrations.html
