@@ -1,4 +1,4 @@
-ARG BIALET_VERSION=0.6
+ARG BIALET_VERSION=0.7
 
 # Install library dependencies
 FROM alpine:latest AS base
