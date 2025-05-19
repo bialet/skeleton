@@ -8,6 +8,6 @@ cd my-web-app
 docker compose up
 ```
 
-Go to [localhost:7000](http://localhost:7000) in your browser.
+Go to [localhost:7001](http://localhost:7001) in your browser.
 
 Read more on the [documentation](https://bialet.dev).
