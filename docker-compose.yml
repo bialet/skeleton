@@ -1,6 +1,6 @@
 services:
   bialet:
-    image: bialet/bialet:0.8
+    image: bialet/bialet:latest
     ports:
       - ${BIALET_PORT:-7001}:7001
     volumes:
