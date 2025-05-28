@@ -1,6 +1,6 @@
 services:
   bialet:
-    build: _app
+    image: bialet/bialet:0.8
     ports:
       - ${BIALET_PORT:-7001}:7001
     volumes:
