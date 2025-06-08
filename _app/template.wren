@@ -1,4 +1,3 @@
-//
 // You can use this object to create your own templates
 //
 // @see https://bialet.dev
